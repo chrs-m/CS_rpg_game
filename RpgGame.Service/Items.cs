@@ -1,3 +1,5 @@
+using System.Runtime.CompilerServices;
+
 namespace RpgGame.Service;
 
 public class Items
@@ -18,14 +20,14 @@ public class Items
         new Food("Falcon långburk", 10),
         new Food("Snigel", 15),
         new Food("Grillad Kyckling", 30),
-        new Food("Dunk hämbränt", -15),
-        new Food("Nybakad pizza", 40)
+        new Food("Dunk hembränt", -15),
+        new Food("Calzone med extra bea", 40)
     };
     
     public static List<Enemy> Enemies = new List<Enemy>()
     {
-        new Enemy("Piss i huvet", 15, "enemy", new Weapon("Repstump", 3, "", null)),
-        new Enemy("Gissa mitt jobb", 30, "enemy", new Weapon("Vässat stolsben", 10, "", null)),
-        new Enemy("Tjuven i Baghdad", 70, "boss", new Weapon("Shamshir from Baghdad", 20, "", null))
+        new Enemy("Piss i huvet", 15, "enemy", new Weapon("Repstump", 3, $"En bit rep som 'Piss i huvet' tagit med sig från hamnen.", null)),
+        new Enemy("Gissa mitt jobb", 30, "enemy", new Weapon("Vässat stolsben", 10, $"Efter slagsmål i hamnen så fick 'Gissa mitt jobb' med sig detta hem.", null)),
+        new Enemy("Tjuven i Baghdad", 70, "boss", new Weapon("Shamshir stulen i Baghdad", 20, "Föremålet behöver ingen närmre beskrvining..", null))
     };
 }
