@@ -6,11 +6,11 @@ public class Items
 {
     public static List<Weapon> Weapons = new List<Weapon>()
     {
-        new Weapon("Trasig käpp", 5, "Kundvagns-Kristers gammla käpp", 5),
-        new Weapon("Slipat pingisracket", 10, "", 15),
-        new Weapon("Baseballträ", 20, "", 35),
-        new Weapon("T-Kors", 30, "", 50),
-        new Weapon("Farfars gamla värja", 100, "", null)
+        new Weapon("Trasig käpp", 5, "Kundvagns-Kristers gammla käpp.", 5),
+        new Weapon("Slipat pingisracket", 10, "Ett mycket välanvänt racket som fått lite vassare kanter.", 15),
+        new Weapon("Baseballträ", 20, "Standard baseboll trä, stulet från Stadium.", 35),
+        new Weapon("T-Kors", 30, "Prima T-kors, stulet från Biltema.", 50),
+        new Weapon("Farfars gamla värja", 100, "Gått i arv i flera generationer, sägs ha varit med sedan slaget vid Uddevalla ano 1677.", null)
     };
     
     public static List<Food> Food = new List<Food>()

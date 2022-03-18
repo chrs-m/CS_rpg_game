@@ -32,7 +32,7 @@ public class IO
         }
     }
 
-    public string StringIn(string message, bool clear)
+    public static string StringIn(string message, bool clear = false)
     {
         if (clear)
             Console.Clear();
