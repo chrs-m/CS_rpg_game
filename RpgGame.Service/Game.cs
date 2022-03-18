@@ -4,7 +4,7 @@ namespace RpgGame.Service;
 
 public class Game
 {
-    private Player player = new Player();
+    private Player player;
     
     public void StartGame()
     {
@@ -12,7 +12,14 @@ public class Game
 
         if (menuItem == 1)
         {
-            
+            Console.Clear();
+            string name = IO.StringIn("Välj ett namn: ");
+
+            player = new Player(name, 20, Items.Weapons[0]);
+
+            new RoundOne(player).StartRound();
+            Console.Clear();
+            new RoundTwo(player).StartRound();
         }
     }
 

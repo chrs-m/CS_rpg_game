@@ -4,21 +4,43 @@ public class RoundOne : Round
 {
     public int RoundNum { get; }
     public string RoundType { get; }
+    private Player Player;
+    
+    public RoundOne(Player player)
+    {
+        Player = player;
+    }
 
     public override void StartRound()
     {
         var ms = 1000;
         
-        IO.Out($"Välkommen {Player.name}!");
+        IO.Out($"Välkommen {Player.Name}!");
         Thread.Sleep(ms);
         IO.Out("Du vaknar upp lite halvtrasig i slottskogen efter en utekväll..");
         Thread.Sleep(ms);
-        IO.Out($"Bredvid dig hittar du {Items.Weapons[0]}({Items.Weapons[0].Damage}dmg) och en {Items.Food[0]}.");
+        IO.Out($"Bredvid dig hittar du {Items.Weapons[0].Name}({Items.Weapons[0].Damage}dmg) och en {Items.Food[0].Name}.");
         Thread.Sleep(ms);
-        IO.Out($"{Items.Food[0]} ger dig lite extra energi ({Items.Food[0].Modifier}).");
+        IO.Out($"{Items.Food[0].Name} ger dig lite extra energi ({Items.Food[0].Modifier}).");
+
+        Player.Weapon = Items.Weapons[0];
+        Player.Consume(Items.Food[0]);
+        
+        Thread.Sleep(ms);
+        IO.Out($"Du har nu {Player.Hp}hp och ditt vapen är {Player.Weapon.Name} ({Player.Weapon.Damage}dmg).");
 
         Console.WriteLine();
-        IO.Out("1. Gå vidare");
-        IO.IntIn("");
+        while (true)
+        {
+            IO.Out("1. Gå vidare");
+            int choosen = IO.IntIn("");
+
+            if (choosen == 1)
+            {
+                break;
+            }
+
+            IO.Out("Hint, det är 1...: ");
+        }
     }
 }
