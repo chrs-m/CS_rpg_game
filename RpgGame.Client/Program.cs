@@ -4,5 +4,3 @@ using RpgGame.Service;
 Game game = new Game();
 
 game.StartGame();
-
-Console.WriteLine(Items.Enemies.First().Weapon.Description);

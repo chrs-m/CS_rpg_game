@@ -2,7 +2,7 @@ namespace RpgGame.Service;
 
 public class IO
 {
-    public void Out(string message, bool clear)
+    public static void Out(string message, bool clear = false)
     {
         if (clear)
             Console.Clear();
@@ -10,7 +10,7 @@ public class IO
         Console.WriteLine(message);
     }
 
-    public int IntIn(string message, bool clear)
+    public static int IntIn(string message, bool clear = false)
     {
         if (clear)
             Console.Clear();
