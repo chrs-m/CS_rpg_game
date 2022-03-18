@@ -14,14 +14,14 @@ public class RoundOneTests
     {
         Player player = new Player("Test player", 20, new Weapon("", 0, ""));
         
-        RoundOne round = new RoundOne(player);
-        round.StartRound();
-        
         var stringWriter = new StringWriter();
         Console.SetOut(stringWriter);
 
         var stringReader = new StringReader("1");
         Console.SetIn(stringReader);
+
+        RoundOne round = new RoundOne(player);
+        round.StartRound();
 
         Assert.AreEqual(23, player.Hp);
     }
