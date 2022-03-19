@@ -20,6 +20,8 @@ public class Game
             new RoundOne(player).StartRound();
             Console.Clear();
             new RoundTwo(player).StartRound();
+            Console.Clear();
+            new RoundThree(player).StartRound();
         }
     }
 
@@ -30,13 +32,19 @@ public class Game
         
         while (!isValidInput)
         {
-            IO.Out("--- Välkommen till RPG GAME ---");
+            Console.ForegroundColor = ConsoleColor.Green;
+            IO.Out("--- Välkommen till RPGBG ---");
+            Console.ResetColor();
             IO.Out("");
+            Console.ForegroundColor = ConsoleColor.DarkGreen;
             IO.Out("1. Starta nytt spel");
             IO.Out("9. Avsluta");
+            Console.ResetColor();
             IO.Out("");
-
+            
+            Console.ForegroundColor = ConsoleColor.Cyan;
             choosenMenu = IO.IntIn("Välj ett alternativ: ");
+            Console.ResetColor();
 
             switch (choosenMenu)
             {

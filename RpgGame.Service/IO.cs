@@ -27,7 +27,7 @@ public class IO
 
             Console.Clear();
             Console.ForegroundColor = ConsoleColor.Yellow;
-            Console.WriteLine("Du måste ange ett nummer..... ");
+            Console.WriteLine("Du måste ange ett nummer..");
             Console.ResetColor();
         }
     }
@@ -47,7 +47,7 @@ public class IO
 
             Console.Clear();
             Console.ForegroundColor = ConsoleColor.Yellow;
-            Console.WriteLine("Du måste ange en sträng....");
+            Console.WriteLine("Du måste ange en sträng..");
             Console.ResetColor();
         }
     }

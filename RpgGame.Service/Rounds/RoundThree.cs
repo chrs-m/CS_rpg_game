@@ -11,6 +11,17 @@ public class RoundThree : Round
     {
         Player = player;
     }
-    
-    public override void StartRound() { }
+
+    public override void StartRound()
+    {
+        var ms = 1000;
+        IO.Out("Hello");
+        
+        
+        //message
+        //choice
+        //events
+        //outcome
+        //move on
+    }
 }

@@ -29,7 +29,7 @@ public class RoundOne : Round
         //Thread.Sleep(ms);
         IO.Out($"Du har nu {Player.Hp}hp och ditt vapen är {Player.Weapon.Name} ({Player.Weapon.Damage}dmg).");
 
-        Console.WriteLine();
+       IO.Out("");
         while (true)
         {
             IO.Out("1. Gå vidare");
