@@ -2,10 +2,12 @@ namespace RpgGame.Service;
 
 public class Coins
 {
-    public int Quantity { get; }
+    public string Name { get; }
+    public int Modifier { get; }
 
-    public Coins(int quantity)
+    public Coins(string name, int modifier)
     {
-        Quantity = quantity;
+        Name = name;
+        Modifier = modifier;
     }
 }

@@ -40,7 +40,9 @@ public class RoundOne : Round
                 break;
             }
 
-            IO.Out("Hint, det är 1...: ");
+            Console.ForegroundColor = ConsoleColor.Magenta;
+            IO.Out("Hint, det är 1...: ", true);
+            Console.ResetColor();
         }
     }
 }

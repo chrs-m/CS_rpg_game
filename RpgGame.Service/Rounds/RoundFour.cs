@@ -11,6 +11,15 @@ public class RoundFour : Round
     {
         Player = player;
     }
-    
-    public override void StartRound() { }
+
+    public override void StartRound()
+    {
+        IO.Out("Hello");
+        
+        //message
+        //choice
+        //events
+        //outcome
+        //move on
+    }
 }

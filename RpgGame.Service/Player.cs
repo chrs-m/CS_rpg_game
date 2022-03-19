@@ -20,4 +20,9 @@ public class Player
     {
         Hp += food.Modifier;
     }
+
+    public void GetCoins(Coins coins)
+    {
+        Coins += coins.Modifier;
+    }
 }

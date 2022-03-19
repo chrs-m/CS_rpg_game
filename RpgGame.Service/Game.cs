@@ -22,6 +22,8 @@ public class Game
             new RoundTwo(player).StartRound();
             Console.Clear();
             new RoundThree(player).StartRound();
+            Console.Clear();
+            new RoundFour(player).StartRound();
         }
     }
 
@@ -55,7 +57,7 @@ public class Game
                     isValidInput = true;
                     break;
                 case 9:
-                    IO.Out("Hejdå!", true);
+                    IO.Out("Hej då!", true);
                     Environment.Exit(0);
                     break;
             }

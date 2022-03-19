@@ -27,6 +27,15 @@ public class Items
         new Food("Smutsig hönökaka", -3),
         new Food("Utspottad lössnus", -10)
     };
+
+    public static List<Coins> Coins = new List<Coins>()
+    {
+        new Coins("trasig myntbörs", 0),
+        new Coins("liten myntbörs", 15),
+        new Coins("lagom stor myntbörs, aka Svensson-börs", 35),
+        new Coins("stor myntbörs", 50),
+        
+    };
     
     public static List<Enemy> Enemies = new List<Enemy>()
     {
@@ -34,4 +43,6 @@ public class Items
         new Enemy("Gissa mitt jobb", 30, "enemy", new Weapon("Vässat stolsben", 10, $"Efter slagsmål i hamnen så fick 'Gissa mitt jobb' med sig detta hem.", null)),
         new Enemy("Tjuven i Baghdad", 70, "boss", new Weapon("Shamshir stulen i Baghdad", 20, "Föremålet behöver ingen närmre beskrvining..", null))
     };
+    
+
 }

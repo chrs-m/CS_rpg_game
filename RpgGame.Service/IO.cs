@@ -28,6 +28,7 @@ public class IO
             Console.Clear();
             Console.ForegroundColor = ConsoleColor.Yellow;
             Console.WriteLine("Du måste ange ett nummer..");
+            Console.WriteLine("Testa [1] eller [2]....");
             Console.ResetColor();
         }
     }
