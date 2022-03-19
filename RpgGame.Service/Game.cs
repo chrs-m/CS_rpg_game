@@ -15,7 +15,7 @@ public class Game
             Console.Clear();
             string name = IO.StringIn("Välj ett namn: ");
 
-            player = new Player(name, 20, Items.Weapons[0]);
+            player = new Player(name, 20, Items.Weapons[0], 0);
 
             new RoundOne(player).StartRound();
             Console.Clear();
