@@ -4,9 +4,9 @@ public class RoundTwo : Round
 {
     public int RoundNum { get; }
     public string RoundType { get; }
-    
+
     private Player Player;
-    
+
     public RoundTwo(Player player)
     {
         Player = player;
@@ -15,11 +15,11 @@ public class RoundTwo : Round
     public override void StartRound()
     {
         var ms = 1000;
-        
+
         var random = new Random();
         int index = random.Next(Items.Food.Count);
         var randomFood = Items.Food[index];
-        
+
         IO.Out($"När du kommer till säldammen så ser du {randomFood.Name} på marken.");
         IO.Out("Vill du plocka upp och förtära det du hittade?");
         Console.ForegroundColor = ConsoleColor.Green;
@@ -27,10 +27,10 @@ public class RoundTwo : Round
         Console.ForegroundColor = ConsoleColor.Cyan;
         var inputAnswerFood = IO.IntIn("Gör ditt val: ");
         Console.ResetColor();
-        
+
         if (inputAnswerFood == 1)
         {
-            IO.Out("",true);
+            IO.Out("", true);
             Player.Consume(randomFood);
 
             if (randomFood.Modifier < 0)
@@ -41,17 +41,17 @@ public class RoundTwo : Round
                 Console.ResetColor();
                 IO.Out("");
             }
-            if(randomFood.Modifier > 1)
+
+            if (randomFood.Modifier > 1)
             {
                 IO.Out("");
                 Console.ForegroundColor = ConsoleColor.Green;
                 IO.Out($"Du förtärde {randomFood.Name}, ditt hp är nu {Player.Hp}");
                 Console.ResetColor();
-                IO.Out(""); 
+                IO.Out("");
             }
-         
         }
-        
+
         if (inputAnswerFood == 2)
         {
             IO.Out("", true);
@@ -72,6 +72,7 @@ public class RoundTwo : Round
             {
                 break;
             }
+
             IO.Out("", true);
             Console.ForegroundColor = ConsoleColor.DarkGreen;
             IO.Out("Du stannar kvar och försöker beundra sälarna som inte syns till..");

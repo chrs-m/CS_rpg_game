@@ -10,9 +10,10 @@ public class Items
         new Weapon("Slipat pingisracket", 10, "Ett mycket välanvänt racket som fått lite vassare kanter.", 15),
         new Weapon("Baseballträ", 20, "Standard baseboll trä, stulet från Stadium.", 35),
         new Weapon("T-Kors", 30, "Prima T-kors, stulet från Biltema.", 50),
-        new Weapon("Farfars gamla värja", 100, "Gått i arv i flera generationer, sägs ha varit med sedan slaget vid Uddevalla ano 1677.", null)
+        new Weapon("Farfars gamla värja", 100,
+            "Gått i arv i flera generationer, sägs ha varit med sedan slaget vid Uddevalla ano 1677.", null)
     };
-    
+
     public static List<Food> Food = new List<Food>()
     {
         new Food("Halväten Biltemakorv", 3),
@@ -34,15 +35,16 @@ public class Items
         new Coins("liten myntbörs", 15),
         new Coins("lagom stor myntbörs, aka Svensson-börs", 35),
         new Coins("stor myntbörs", 50),
-        
     };
-    
+
     public static List<Enemy> Enemies = new List<Enemy>()
     {
-        new Enemy("Piss i huvet", 15, "enemy", new Weapon("Repstump", 3, $"En bit rep som 'Piss i huvet' tagit med sig från hamnen.", null)),
-        new Enemy("Gissa mitt jobb", 30, "enemy", new Weapon("Vässat stolsben", 10, $"Efter slagsmål i hamnen så fick 'Gissa mitt jobb' med sig detta hem.", null)),
-        new Enemy("Tjuven i Baghdad", 70, "boss", new Weapon("Shamshir stulen i Baghdad", 20, "Föremålet behöver ingen närmre beskrvining..", null))
+        new Enemy("Piss i huvet", 15, "enemy",
+            new Weapon("Repstump", 3, $"En bit rep som 'Piss i huvet' tagit med sig från hamnen.", null)),
+        new Enemy("Gissa mitt jobb", 30, "enemy",
+            new Weapon("Vässat stolsben", 10, $"Efter slagsmål i hamnen så fick 'Gissa mitt jobb' med sig detta hem.",
+                null)),
+        new Enemy("Tjuven i Baghdad", 70, "boss",
+            new Weapon("Shamshir stulen i Baghdad", 20, "Föremålet behöver ingen närmre beskrvining..", null))
     };
-    
-
 }

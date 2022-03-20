@@ -6,9 +6,9 @@ public class RoundThree : Round
 {
     public int RoundNum { get; }
     public string RoundType { get; }
-    
+
     private Player Player;
-    
+
     public RoundThree(Player player)
     {
         Player = player;
@@ -21,8 +21,9 @@ public class RoundThree : Round
         var random = new Random();
         int index = random.Next(Items.Coins.Count);
         var randomCoins = Items.Coins[index];
-        
-        IO.Out($"När du vandrar vidare mot August Kobbs damm så ser du en {randomCoins.Name} på gatan som någon verkar ha tappat.");
+
+        IO.Out(
+            $"När du vandrar vidare mot August Kobbs damm så ser du en {randomCoins.Name} på gatan som någon verkar ha tappat.");
         IO.Out($"Vill du plocka upp {randomCoins.Name} eller låta den ligga kvar på marken?");
         Console.ForegroundColor = ConsoleColor.Green;
         IO.Out("[1] för att plocka upp -- [2] för att låta den ligga");
@@ -55,7 +56,7 @@ public class RoundThree : Round
                 IO.Out("");
             }
         }
-        
+
         if (inputAnswerCoins == 2)
         {
             IO.Out("", true);
@@ -63,7 +64,7 @@ public class RoundThree : Round
             IO.Out($"Du valde att slänga in {randomCoins.Name} i buskarna för någon annan att hitta.");
             Console.ResetColor();
         }
-        
+
         while (true)
         {
             if (Player.Hp > 0)
@@ -73,7 +74,7 @@ public class RoundThree : Round
                 Console.ForegroundColor = ConsoleColor.Cyan;
                 IO.Out("[1] för att leta -- [2] för att gå vidare");
             }
- 
+
             int choosen = IO.IntIn("");
             Console.ResetColor();
 
@@ -87,7 +88,7 @@ public class RoundThree : Round
 
             IO.Out("", true);
             Console.ForegroundColor = ConsoleColor.DarkGreen;
-            IO.Out("Med ögonen i backen virrar du omkring utan resultat, rakt in i skogen.");
+            IO.Out("Med ögonen i backen virrar du omkring utan resultat, rakt in i skogen och du är vilse..");
             Console.ForegroundColor = ConsoleColor.DarkYellow;
             IO.Out($"Din girighet kostade dig  2hp. Du har nu {Player.Hp}hp kvar.");
             IO.Out("");
@@ -103,7 +104,7 @@ public class RoundThree : Round
                 Console.ForegroundColor = ConsoleColor.Yellow;
                 IO.Out("Tryck [9] för att börja om..");
                 Console.ResetColor();
-                
+
                 if (choosen == 9)
                 {
                     Console.Clear();
