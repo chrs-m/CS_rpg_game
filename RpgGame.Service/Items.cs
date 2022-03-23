@@ -18,13 +18,13 @@ public class Items
     {
         new Food("Halväten Biltemakorv", 3),
         new Food("Möglig hamburgare", -6),
-        new Food("Falcon långburk", 8),
+        new Food("Falcon långburk", 8, 11),
         new Food("Snigel", 15),
-        new Food("Grillad Kyckling", 30),
-        new Food("Dunk hembränt", -15),
-        new Food("Calzone med extra bea", 40),
-        new Food("Halv special", 20),
-        new Food("Kotte", 2),
+        new Food("Grillad Kyckling", 30, 15),
+        new Food("Dunk hembränt", -15, 5),
+        new Food("Calzone med extra bea", 40, 40),
+        new Food("Halv special", 20, 15),
+        new Food("Kotte", 2, 1),
         new Food("Smutsig hönökaka", -3),
         new Food("Utspottad lössnus", -10)
     };
