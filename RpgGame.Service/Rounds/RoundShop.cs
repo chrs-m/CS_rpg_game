@@ -1,13 +1,13 @@
 namespace RpgGame.Service.Rounds;
 
-public class RoundSix : Round
+public class RoundShop : Round
 {
     public int RoundNum { get; }
     public string RoundType { get; }
 
     private Player Player;
 
-    public RoundSix(Player player)
+    public RoundShop(Player player)
     {
         Player = player;
     }

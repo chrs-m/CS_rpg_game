@@ -96,7 +96,7 @@ public class RoundSeven : Round
         else
         {
             IO.Out($"{Items.Enemies[1].Name} blev för mycket av en utmaning för dig.");
-            IO.Out($"Med sin {Items.Enemies[1].Weapon} slog han dig gul och blå och du fick ge upp.");
+            IO.Out($"Med sin {Items.Enemies[1].Weapon.Name} slog han dig gul och blå och du fick ge upp.");
             Game.GameOver();
         }
     }
