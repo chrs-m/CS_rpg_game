@@ -15,6 +15,7 @@ public class RoundEight : Round
     public override void StartRound()
     {
         FindCoins();
+        Console.Clear();
         FindFood();
     }
 
@@ -114,6 +115,8 @@ public class RoundEight : Round
                     Game.GameOver();
                 }
             }
+
+            break;
         }
     }
     
