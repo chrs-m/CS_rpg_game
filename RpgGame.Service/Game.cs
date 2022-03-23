@@ -17,21 +17,21 @@ public class Game
 
             player = new Player(name, 20, Items.Weapons[0], 0);
 
-            new RoundOne(player).StartRound();
+            new RoundOne(player).StartRound(); // Done
             Console.Clear();
-            new RoundTwo(player).StartRound();
+            new RoundTwo(player).StartRound(); // Done
             Console.Clear();
-            new RoundThree(player).StartRound();
+            new RoundThree(player).StartRound(); // Done
             Console.Clear();
-            new RoundFour(player).StartRound();
+            new RoundFour(player).StartRound(); // Done
             Console.Clear();
-            new RoundFive(player).StartRound();
+            new RoundFive(player).StartRound(); // Done
             Console.Clear();
-            new RoundSix(player).StartRound();
+            new RoundSix(player).StartRound(); // Done
             Console.Clear();
-            new RoundSeven(player).StartRound();
+            new RoundSeven(player).StartRound(); // Done
             Console.Clear();
-            new RoundEight(player).StartRound();
+            new RoundEight(player).StartRound(); // Done
             Console.Clear();
             new RoundNine(player).StartRound();
             Console.Clear();
