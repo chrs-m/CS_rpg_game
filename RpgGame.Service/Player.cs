@@ -19,6 +19,7 @@ public class Player
     public void Consume(Food food)
     {
         Hp += food.Modifier;
+        Coins -= food.Price;
     }
 
     public void GetCoins(Coins coins)

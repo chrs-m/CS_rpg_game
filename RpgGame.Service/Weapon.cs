@@ -5,9 +5,9 @@ public class Weapon
     public string Name { get; }
     public int Damage { get; }
     public string Description { get; }
-    public int? Price { get; }
+    public int Price { get; }
 
-    public Weapon(string name, int damage, string description, int? price = null)
+    public Weapon(string name, int damage, string description, int price = 0)
     {
         Name = name;
         Damage = damage;

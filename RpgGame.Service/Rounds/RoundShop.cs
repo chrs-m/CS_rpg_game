@@ -66,7 +66,7 @@ public class RoundShop : Round
 
     private void FoodShop()
     {
-        var BuyableFood = Items.Food.Where(food => food.Price != null).OrderBy(food => food.Price).ToArray();
+        var BuyableFood = Items.Food.Where(food => food.Price != 0).OrderBy(food => food.Price).ToArray();
 
         Console.Clear();
         IO.Out("");
@@ -83,9 +83,14 @@ public class RoundShop : Round
         while (true)
         {
             IO.Out($"Du har {Player.Coins}kr");
-            int choosen = IO.IntIn($"Välj en produkt (1 - {index}): ");
+            int choosen = IO.IntIn($"Välj en produkt (1 - {index - 1}), 9 för att avbryta: ");
 
-            if (choosen > 0 && choosen <= index)
+            if (choosen == 9)
+            {
+                break;
+            }
+            
+            if (choosen > 0 && choosen <= index - 1)
             {
                 Food wantsToBuy = BuyableFood[choosen - 1];
 
@@ -126,7 +131,7 @@ public class RoundShop : Round
 
     private void WeaponShop()
     {
-        var BuyableWeapon = Items.Weapons.Where(weapon => weapon.Price != null).OrderBy(weapon => weapon.Price).ToArray();
+        var BuyableWeapon = Items.Weapons.Where(weapon => weapon.Price != 0).OrderBy(weapon => weapon.Price).ToArray();
         
         Console.Clear();
         IO.Out("");
@@ -143,10 +148,15 @@ public class RoundShop : Round
         while (true)
         {
             IO.Out($"Du har {Player.Coins}kr");
-            int choosen = IO.IntIn($"Välj en produkt (1 - {index}): ");
+            int choosen = IO.IntIn($"Välj en produkt (1 - {index - 1}), 9 för att avbryta: ");
             Console.Clear();
 
-            if (choosen > 0 && choosen <= index)
+            if (choosen == 9)
+            {
+                break;
+            }
+
+            if (choosen > 0 && choosen <= index - 1)
             {
                 Weapon wantsToBuy = BuyableWeapon[choosen - 1];
 
@@ -155,6 +165,7 @@ public class RoundShop : Round
                     Console.Clear();
                     IO.Out($"Du har köpt {wantsToBuy.Name}, lycka till i nästa strid");
                     Player.Weapon = wantsToBuy;
+                    Player.Coins -= wantsToBuy.Price;
                 }
                 else
                 {
