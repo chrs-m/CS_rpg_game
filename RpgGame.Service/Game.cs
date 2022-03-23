@@ -23,7 +23,23 @@ public class Game
             Console.Clear();
             new RoundThree(player).StartRound();
             Console.Clear();
-            new RoundFour(player).StartRound();
+            new RoundFour(player).StartRound();    
+            Console.Clear();
+            new RoundFive(player).StartRound();
+            Console.Clear();
+            new RoundSix(player).StartRound();
+            Console.Clear();
+            new RoundSeven(player).StartRound();
+            Console.Clear();
+            new RoundEight(player).StartRound();
+            Console.Clear();
+            new RoundNine(player).StartRound();
+            Console.Clear();
+            new RoundTen(player).StartRound();
+            Console.Clear();
+            new RoundEleven(player).StartRound();
+            Console.Clear();
+            new RoundTwelve(player).StartRound();
         }
     }
 

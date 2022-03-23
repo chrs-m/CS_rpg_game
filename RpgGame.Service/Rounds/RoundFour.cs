@@ -61,12 +61,42 @@ public class RoundFour : Round
 
         if (winner == "player")
         {
-            //fortsätt storyn..
+            IO.Out($"{Items.Enemies[0].Name} var en enkel match för en krigare som dig.");
+            IO.Out($"Med din {Player.Weapon.Name} gav du {Items.Enemies[0].Name} vad han tålde.");
+            IO.Out("Du gick vinnade ut ur den här duellen, grattis!");
+
+            while (true)
+            {
+                Console.ForegroundColor = ConsoleColor.Green;
+                IO.Out($"Vill du gå vidare eller stå kvar och glo på {Items.Enemies[0].Name}");
+                Console.ForegroundColor = ConsoleColor.Cyan;
+                IO.Out("[1] för att gå vidare -- [2] för att glo");
+
+
+                int choosen = IO.IntIn("");
+                Console.ResetColor();
+
+                if (choosen == 2)
+                {
+                    Console.Clear();
+                    IO.Out($"Du står kvar och glor på {Items.Enemies[0].Name} i fem minuter..");
+                }
+                
+                if (choosen == 1)
+                {
+                    Console.Clear();
+                    Console.ResetColor();
+                    break;
+                }
+            }
         }
         else
         {
-            IO.Out("You dead man. Sorry.");
+
+            IO.Out($"{Items.Enemies[0].Name} blev för mycket av en utmaning för dig.");
+            IO.Out($"Med sin {Items.Enemies[0].Weapon} slog han dig gul och blå och du fick ge upp.");
             Game.GameOver();
+
         }
 
         //message
