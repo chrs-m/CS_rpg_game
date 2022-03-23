@@ -18,7 +18,7 @@ public class RoundSeven : Round
 
         IO.Out("Efter din lilla shoppingspree går du vidare på Plantskolevägen");
         //Thread.Sleep(ms);
-        IO.Out("Borta vid vollebollplanerna ser du ännu en 'hamnare'.");
+        IO.Out("Borta vid volleybollplanerna ser du ännu en 'hamnare'.");
         //Thread.Sleep(ms);
         IO.Out("Även han har nog varit på flaskan lite väl tidigt på dagen, så att säga..");
         //Thread.Sleep(ms);
