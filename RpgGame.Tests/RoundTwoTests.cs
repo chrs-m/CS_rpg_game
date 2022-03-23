@@ -12,7 +12,7 @@ public class RoundTwoTests
     [TestMethod]
     public void StartRound_PlayerHaveWeapon_WeaponNameIs()
     {
-        Player player = new Player("Test player", 23, new Weapon("Trasig käpp", 5, ""));
+        Player player = new Player("Test player", 23, new Weapon("Trasig käpp", 5, ""), 0);
 
         var stringWriter = new StringWriter();
         Console.SetOut(stringWriter);

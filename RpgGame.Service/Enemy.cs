@@ -3,7 +3,7 @@ namespace RpgGame.Service;
 public class Enemy
 {
     public string Name { get; }
-    public int Hp { get; }
+    public int Hp { get; set; }
     public Weapon Weapon { get; }
     
     public string Type { get; }

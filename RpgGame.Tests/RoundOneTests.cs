@@ -12,7 +12,7 @@ public class RoundOneTests
     [TestMethod]
     public void StartRound_PlayerGetsHp_HpIsAdded()
     {
-        Player player = new Player("Test player", 20, new Weapon("", 0, ""));
+        Player player = new Player("Test player", 20, new Weapon("", 0, ""), 0);
         
         var stringWriter = new StringWriter();
         Console.SetOut(stringWriter);
@@ -30,7 +30,7 @@ public class RoundOneTests
     [TestMethod]
     public void StartRound_PlayerGetsWeapon_DmgIsAdded()
     {
-        Player player = new Player("Test player", 20, new Weapon("", 0, ""));
+        Player player = new Player("Test player", 20, new Weapon("", 0, ""), 0);
         
         var stringWriter = new StringWriter();
         Console.SetOut(stringWriter);

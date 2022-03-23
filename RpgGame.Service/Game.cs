@@ -65,4 +65,9 @@ public class Game
 
         return choosenMenu;
     }
+
+    public static void gameOver()
+    {
+       
+    }
 }

@@ -31,7 +31,6 @@ public class RoundOne : Round
 
         //Thread.Sleep(ms);
         IO.Out($"Du har nu {Player.Hp}hp och ditt vapen är {Player.Weapon.Name} ({Player.Weapon.Damage}dmg).");
-            ∆
         IO.Out("");
         while (true)
         {

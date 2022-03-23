@@ -52,9 +52,22 @@ public class RoundFour : Round
             {
                 IO.Out("", true);
                 IO.Out($"Dags för din första duell!");
+                break;
             }
         }
 
+        Duel duel = new Duel(Player, Items.Enemies[0]);
+        var winner = duel.startDuel();
+
+        if (winner == "player")
+        {
+            //fortsätt storyn..
+        }
+        else
+        {
+            IO.Out("You dead man. Sorry.");
+            Game.gameOver();
+        }
 
         //message
         //choice
