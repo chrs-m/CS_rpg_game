@@ -38,8 +38,7 @@ public class Game
             new RoundTen(player).StartRound();
             Console.Clear();
             new RoundEleven(player).StartRound();
-            Console.Clear();
-            new RoundTwelve(player).StartRound();
+
         }
     }
 

@@ -81,7 +81,7 @@ public class RoundFour : Round
                     Console.Clear();
                     IO.Out($"Du står kvar och glor på {Items.Enemies[0].Name} i fem minuter..");
                 }
-                
+
                 if (choosen == 1)
                 {
                     Console.Clear();
@@ -92,11 +92,9 @@ public class RoundFour : Round
         }
         else
         {
-
             IO.Out($"{Items.Enemies[0].Name} blev för mycket av en utmaning för dig.");
             IO.Out($"Med sin {Items.Enemies[0].Weapon} slog han dig gul och blå och du fick ge upp.");
             Game.GameOver();
-
         }
     }
 }
