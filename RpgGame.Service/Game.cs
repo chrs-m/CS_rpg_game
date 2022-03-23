@@ -5,7 +5,7 @@ namespace RpgGame.Service;
 public class Game
 {
     private Player player;
-    
+
     public void StartGame()
     {
         int menuItem = printMenu();
@@ -23,7 +23,7 @@ public class Game
             Console.Clear();
             new RoundThree(player).StartRound();
             Console.Clear();
-            new RoundFour(player).StartRound();    
+            new RoundFour(player).StartRound();
             Console.Clear();
             new RoundFive(player).StartRound();
             Console.Clear();
@@ -47,7 +47,7 @@ public class Game
     {
         int choosenMenu = 0;
         bool isValidInput = false; // Keep while loop running
-        
+
         while (!isValidInput)
         {
             Console.ForegroundColor = ConsoleColor.Green;
@@ -59,7 +59,7 @@ public class Game
             IO.Out("9. Avsluta");
             Console.ResetColor();
             IO.Out("");
-            
+
             Console.ForegroundColor = ConsoleColor.Cyan;
             choosenMenu = IO.IntIn("Välj ett alternativ: ");
             Console.ResetColor();
@@ -95,7 +95,7 @@ public class Game
                 game.StartGame();
                 break;
             }
-            
+
             if (shouldRestart == "n")
             {
                 Environment.Exit(0);

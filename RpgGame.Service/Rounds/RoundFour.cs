@@ -98,11 +98,5 @@ public class RoundFour : Round
             Game.GameOver();
 
         }
-
-        //message
-        //choice
-        //events
-        //outcome
-        //move on
     }
 }

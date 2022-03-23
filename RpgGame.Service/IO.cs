@@ -52,4 +52,15 @@ public class IO
             Console.ResetColor();
         }
     }
+
+    public static void AnyIn(string message, bool clear = false)
+    {
+        if (clear)
+        {
+            Console.Clear();
+        }
+
+        Console.Write(message);
+        Console.ReadLine();
+    }
 }
