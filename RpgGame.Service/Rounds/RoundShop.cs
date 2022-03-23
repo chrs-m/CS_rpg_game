@@ -66,7 +66,7 @@ public class RoundShop : Round
 
     private void FoodShop()
     {
-        var BuyableFood = Items.Food.Where(food => food.Price != null).ToArray();
+        var BuyableFood = Items.Food.Where(food => food.Price != null).OrderBy(food => food.Price).ToArray();
 
         Console.Clear();
         IO.Out("");
@@ -126,7 +126,7 @@ public class RoundShop : Round
 
     private void WeaponShop()
     {
-        var BuyableWeapon = Items.Weapons.Where(weapon => weapon.Price != null).ToArray();
+        var BuyableWeapon = Items.Weapons.Where(weapon => weapon.Price != null).OrderBy(weapon => weapon.Price).ToArray();
         
         Console.Clear();
         IO.Out("");

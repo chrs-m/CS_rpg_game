@@ -33,7 +33,7 @@ public class Game
             Console.Clear();
             new RoundEight(player).StartRound(); // Done
             Console.Clear();
-            new RoundShop(player).StartRound();
+            new RoundShop(player).StartRound(); // Done
             Console.Clear();
             new RoundTen(player).StartRound();
             Console.Clear();
