@@ -66,7 +66,7 @@ public class RoundFour : Round
         else
         {
             IO.Out("You dead man. Sorry.");
-            Game.gameOver();
+            Game.GameOver();
         }
 
         //message

@@ -66,8 +66,25 @@ public class Game
         return choosenMenu;
     }
 
-    public static void gameOver()
+    public static void GameOver()
     {
-       
+        while (true)
+        {
+            var shouldRestart = IO.StringIn("Vill du starta om? (y/n) ");
+
+            if (shouldRestart == "y")
+            {
+                Console.Clear();
+                Game game = new Game();
+                game.StartGame();
+                break;
+            }
+            
+            if (shouldRestart == "n")
+            {
+                Environment.Exit(0);
+                break;
+            }
+        }
     }
 }

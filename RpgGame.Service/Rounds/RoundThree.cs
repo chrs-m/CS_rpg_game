@@ -51,7 +51,7 @@ public class RoundThree : Round
                 IO.Out("");
                 Console.ForegroundColor = ConsoleColor.Green;
                 IO.Out(
-                    $"Du öppnande börsan och såg att det låg {randomCoins.Modifier} kronor inuti. Du har nu {Player.Coins} kronor på fickan.");
+                    $"Du öppnande börsen och såg att det låg {randomCoins.Modifier} kronor inuti. Du har nu {Player.Coins} kronor på fickan.");
                 Console.ResetColor();
                 IO.Out("");
             }
@@ -107,9 +107,7 @@ public class RoundThree : Round
 
                 if (choosen == 9)
                 {
-                    Console.Clear();
-                    new RoundOne(Player).StartRound();
-                    Console.Clear();
+                    Game.GameOver();
                 }
             }
         }
