@@ -28,7 +28,7 @@ public class RoundTwo : Round
         if (inputAnswerFood == 1)
         {
             IO.Out("", true);
-            Player.Consume(randomFood);
+            Player.Consume(randomFood, true);
 
             if (randomFood.Modifier < 0)
             {
