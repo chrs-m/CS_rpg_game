@@ -111,8 +111,9 @@ public class Game
 
             if (shouldRestart == "2")
             {
+                Console.ForegroundColor = ConsoleColor.Yellow;
+                IO.Out($"Tack för att du spelade!");
                 Environment.Exit(0);
-                break;
             }
         }
     }
