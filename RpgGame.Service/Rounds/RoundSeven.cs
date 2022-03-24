@@ -52,7 +52,7 @@ public class RoundSeven : Round
             if (inputAnswerDuel == 1)
             {
                 IO.Out("", true);
-                IO.Out($"Dags för din första duell!");
+                IO.Out($"Dags för din andra duell!");
                 break;
             }
         }

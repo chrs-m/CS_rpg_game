@@ -22,8 +22,10 @@ public class RoundFour : Round
         Thread.Sleep(ms);
         IO.Out(
             $"När du närmar dig så ser du att det är '{Items.Enemies[0].Name}' från hamnen som står där och viftar med sin {Items.Enemies[0].Weapon.Name}");
+        Thread.Sleep(ms);
         IO.Out($"När '{Items.Enemies[0].Name}' får syn på dig börjar han vråla om att utmana dig i en duell..");
         IO.Out("");
+        Thread.Sleep(ms);
 
 
         while (true)
@@ -59,9 +61,11 @@ public class RoundFour : Round
 
         if (winner == "player")
         {
+            Thread.Sleep(ms);
             IO.Out($"{Items.Enemies[0].Name} var en enkel match för en krigare som dig.");
             Thread.Sleep(ms);
             IO.Out($"Med din {Player.Weapon.Name} gav du {Items.Enemies[0].Name} vad han tålde.");
+            Thread.Sleep(ms);
             IO.Out("Du gick vinnade ut ur den här duellen, grattis!");
 
             while (true)
@@ -79,7 +83,7 @@ public class RoundFour : Round
                 if (choosen == 2)
                 {
                     Console.Clear();
-                    IO.Out($"Du står kvar och glor på {Items.Enemies[0].Name} i fem minuter..");
+                    IO.Out($"Du står kvar och glor på '{Items.Enemies[0].Name}' i fem minuter..");
                 }
 
                 if (choosen == 1)

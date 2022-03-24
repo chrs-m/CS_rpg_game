@@ -26,6 +26,7 @@ public class RoundEight : Round
 
         IO.Out(
             $"När du vandrar vidare längs Azaleadalen mot älgarna så ser du en {randomCoins.Name} på gatan som någon verkar ha tappat.");
+        Thread.Sleep(ms);
         IO.Out($"Vill du plocka upp {randomCoins.Name} eller låta den ligga kvar på marken?");
         IO.Out("");
         Console.ForegroundColor = ConsoleColor.Green;

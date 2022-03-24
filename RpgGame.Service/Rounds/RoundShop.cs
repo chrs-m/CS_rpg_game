@@ -15,9 +15,14 @@ public class RoundShop : Round
         Console.ResetColor();
         while (true)
         {
+            Console.ForegroundColor = ConsoleColor.DarkGreen;
             IO.Out("Du har hittat en shop, vill du gå in?");
+            Console.ForegroundColor = ConsoleColor.Green;
+            IO.Out("");
+            Console.ForegroundColor = ConsoleColor.Cyan;
             IO.Out("[1] ja -- [2] nej, gå vidare");
             int choosen = IO.IntIn("Gör ditt val: ");
+            Console.ResetColor();
 
             if (choosen == 1)
             {

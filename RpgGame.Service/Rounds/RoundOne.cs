@@ -32,6 +32,7 @@ public class RoundOne : Round
         IO.Out("");
         while (true)
         {
+            IO.Out("");
             IO.Out("1. Gå vidare");
             int choosen = IO.IntIn("");
 
