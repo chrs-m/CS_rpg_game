@@ -3,6 +3,7 @@ namespace RpgGame.Service.Rounds;
 public class RoundShop : Round
 {
     private Player Player;
+    private bool exitShop = false; 
 
     public RoundShop(Player player)
     {
@@ -77,7 +78,7 @@ public class RoundShop : Round
             index++;
         }
 
-        while (true)
+        while (!exitShop)
         {
             IO.Out($"Du har {Player.Coins}kr");
             int choosen = IO.IntIn($"Välj en produkt (1 - {index - 1}), 9 för att avbryta: ");
@@ -107,7 +108,7 @@ public class RoundShop : Round
             }
         }
 
-        while (true)
+        while (!exitShop)
         {
             IO.Out("Vill du forstätta handla?");
             var choosen = IO.IntIn("[1] ja -- [2] nej ");
@@ -120,10 +121,9 @@ public class RoundShop : Round
             
             if (choosen == 2)
             {
-                break;
+                exitShop = true;
             }
         }
-
     }
 
     private void WeaponShop()
@@ -142,7 +142,7 @@ public class RoundShop : Round
             index++;
         }
 
-        while (true)
+        while (!exitShop)
         {
             IO.Out($"Du har {Player.Coins}kr");
             int choosen = IO.IntIn($"Välj en produkt (1 - {index - 1}), 9 för att avbryta: ");
@@ -173,7 +173,7 @@ public class RoundShop : Round
             }
         }
 
-        while (true)
+        while (!exitShop)
         {
             IO.Out("Vill du forstätta handla?");
             var choosen = IO.IntIn("[1] ja -- [2] nej ");
@@ -186,7 +186,7 @@ public class RoundShop : Round
             
             if (choosen == 2)
             {
-                break;
+                exitShop = true;
             }
         }
     }
