@@ -25,7 +25,7 @@ public class RoundOne : Round
         IO.Out($"{Items.Food[0].Name} ger dig lite extra energi ({Items.Food[0].Modifier}).");
 
         Player.Weapon = Items.Weapons[0];
-        Player.Consume(Items.Food[0]);
+        Player.Consume(Items.Food[0], true);
 
         //Thread.Sleep(ms);
         IO.Out($"Du har nu {Player.Hp}hp och ditt vapen är {Player.Weapon.Name} ({Player.Weapon.Damage}dmg).");
