@@ -18,7 +18,7 @@ public class RoundEight : Round
 
     private void FindCoins()
     {
-        var ms = 1000;
+        var ms = 1300;
 
         var random = new Random();
         int index = random.Next(Items.Coins.Count);
@@ -92,7 +92,7 @@ public class RoundEight : Round
             IO.Out("", true);
             Console.ForegroundColor = ConsoleColor.DarkGreen;
             IO.Out("Med ögonen i backen virrar du omkring utan resultat, rakt in i skogen och du är vilse..");
-            //Thread.Sleep(ms);
+            Thread.Sleep(ms);
             IO.Out("");
             Console.ForegroundColor = ConsoleColor.DarkYellow;
             IO.Out($"Din girighet kostade dig  2hp. Du har nu {Player.Hp}hp kvar.");
@@ -122,7 +122,7 @@ public class RoundEight : Round
 
     private void FindFood()
     {
-        var ms = 1000;
+        var ms = 1300;
 
         var random = new Random();
         int index = random.Next(Items.Food.Count);

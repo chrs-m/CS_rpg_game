@@ -11,7 +11,7 @@ public class RoundTwo : Round
 
     public override void StartRound()
     {
-        var ms = 1000;
+        var ms = 1300;
 
         var random = new Random();
         int index = random.Next(Items.Food.Count);

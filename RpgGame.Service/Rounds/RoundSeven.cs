@@ -11,22 +11,22 @@ public class RoundSeven : Round
 
     public override void StartRound()
     {
-        var ms = 1000;
+        var ms = 1300;
 
         IO.Out("Efter din lilla shoppingspree går du vidare på Plantskolevägen");
-        //Thread.Sleep(ms);
+        Thread.Sleep(ms);
         IO.Out("Borta vid volleybollplanerna ser du ännu en 'hamnare'.");
-        //Thread.Sleep(ms);
+        Thread.Sleep(ms);
         IO.Out("Även han har nog varit på flaskan lite väl tidigt på dagen, så att säga..");
-        //Thread.Sleep(ms);
+        Thread.Sleep(ms);
         IO.Out(
             $"När du är på ett behagligt men ändå nära avstånd ser du att det är {Items.Enemies[1].Name} som står och gormar.");
-        //Thread.Sleep(ms);
+        Thread.Sleep(ms);
         IO.Out(
             $"Han ser ut att försöka jaga duvor med ett {Items.Enemies[1].Weapon.Name} när han plötsligt får syn på dig..");
-        //Thread.Sleep(ms);
+        Thread.Sleep(ms);
         IO.Out($"{Items.Enemies[1].Name} vill även han utmanda dig i en duell om Azaleadalen!");
-        //Thread.Sleep(ms);
+        Thread.Sleep(ms);
 
 
         while (true)
@@ -63,7 +63,7 @@ public class RoundSeven : Round
         if (winner == "player")
         {
             IO.Out($"{Items.Enemies[1].Name} var en enkel match för en krigare som dig.");
-            //Thread.Sleep(ms);
+            Thread.Sleep(ms);
             IO.Out($"Med din {Player.Weapon.Name} gav du {Items.Enemies[1].Name} vad han tålde.");
             IO.Out("Du gick vinnade ut ur den här duellen, grattis!");
 
@@ -95,9 +95,12 @@ public class RoundSeven : Round
         }
         else
         {
+            Console.ForegroundColor = ConsoleColor.Red;
+            IO.Out("");
             IO.Out($"{Items.Enemies[1].Name} blev för mycket av en utmaning för dig.");
-            //Thread.Sleep(ms);
+            Thread.Sleep(ms);
             IO.Out($"Med sin {Items.Enemies[1].Weapon.Name} slog han dig gul och blå och du fick ge upp.");
+            Console.ResetColor();
             Game.GameOver();
         }
     }

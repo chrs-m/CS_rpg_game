@@ -13,7 +13,7 @@ public class RoundThree : Round
 
     public override void StartRound()
     {
-        var ms = 1000;
+        var ms = 1300;
 
         var random = new Random();
         int index = random.Next(Items.Coins.Count);
@@ -21,7 +21,7 @@ public class RoundThree : Round
 
         IO.Out(
             $"När du vandrar vidare mot August Kobbs damm så ser du en {randomCoins.Name} på gatan som någon verkar ha tappat.");
-        //Thread.Sleep(ms);
+        Thread.Sleep(ms);
         IO.Out($"Vill du plocka upp {randomCoins.Name} eller låta den ligga kvar på marken?");
         IO.Out("");
         Console.ForegroundColor = ConsoleColor.Green;

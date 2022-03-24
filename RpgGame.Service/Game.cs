@@ -17,28 +17,27 @@ public class Game
 
             player = new Player(name, 20, Items.Weapons[0], 0);
 
-            new RoundOne(player).StartRound(); // Done
+            new RoundOne(player).StartRound();
             Console.Clear();
-            new RoundTwo(player).StartRound(); // Done
+            new RoundTwo(player).StartRound();
             Console.Clear();
-            new RoundThree(player).StartRound(); // Done
+            new RoundThree(player).StartRound();
             Console.Clear();
-            new RoundFour(player).StartRound(); // Done
+            new RoundFour(player).StartRound();
             Console.Clear();
-            new RoundFive(player).StartRound(); // Done
+            new RoundFive(player).StartRound();
             Console.Clear();
-            new RoundShop(player).StartRound(); // Done
+            new RoundShop(player).StartRound();
             Console.Clear();
-            new RoundSeven(player).StartRound(); // Done
+            new RoundSeven(player).StartRound();
             Console.Clear();
-            new RoundEight(player).StartRound(); // Done
+            new RoundEight(player).StartRound();
             Console.Clear();
-            new RoundShop(player).StartRound(); // Done
+            new RoundShop(player).StartRound();
             Console.Clear();
             new RoundTen(player).StartRound();
             Console.Clear();
             new RoundEleven(player).StartRound();
-
         }
     }
 
@@ -85,8 +84,11 @@ public class Game
     {
         while (true)
         {
+            Console.ForegroundColor = ConsoleColor.Green;
             IO.Out("Vill du starta om?");
-            var shouldRestart = IO.StringIn("[1] för att börja om, [2] för att avsluta");
+            Console.ForegroundColor = ConsoleColor.DarkGreen;
+            var shouldRestart = IO.StringIn("[1] för att börja om, [2] för att avsluta ");
+            Console.ResetColor();
 
             if (shouldRestart == "1")
             {

@@ -11,10 +11,10 @@ public class RoundFive : Round
 
     public override void StartRound()
     {
-        var ms = 1000;
+        var ms = 1300;
 
         IO.Out("Det börjar bli mörkt och du är trött efter din första duell");
-        //Thread.Sleep(ms);
+        Thread.Sleep(ms);
         IO.Out("Lite längre fram ligger Barfotaslingan som kan fungera som sovplats för natten.");
 
         while (true)
@@ -54,7 +54,7 @@ public class RoundFive : Round
 
         Player.Hp += 5;
         IO.Out("Du somnade gott på en bädd av torkade löv.");
-        //Thread.Sleep(ms);
+        Thread.Sleep(ms);
         IO.Out("");
         IO.Out("Tack vare att du vilade ut ordentligt så fick du lite extra hp.");
         IO.Out($"Du har nu {Player.Hp}hp inför din nästa strid.");

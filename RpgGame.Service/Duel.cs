@@ -13,17 +13,17 @@ public class Duel
 
     public string startDuel() // return "player"|"enemy"
     {
-        var ms = 1000;
+        var ms = 1300;
         while (Player.Hp > 0 && Enemy.Hp > 0)
         {
             //Player attack
             IO.Out($"Du attackarade {Enemy.Name} med {Player.Weapon.Name}.");
-            //Thread.Sleep(ms);
+            Thread.Sleep(ms);
             IO.Out($"{Enemy.Name} tog {Player.Weapon.Damage}hp i skada");
-            //Thread.Sleep(ms);
+            Thread.Sleep(ms);
             Enemy.Hp -= Player.Weapon.Damage; 
             IO.Out($"{Enemy.Name} har nu {Enemy.Hp} hp kvar");
-            //Thread.Sleep(ms);
+            Thread.Sleep(ms);
             IO.Out("");
 
 
@@ -32,12 +32,12 @@ public class Duel
 
             //Enemy attack
             IO.Out($"{Enemy.Name} attackarade dig med {Enemy.Weapon.Name}.");
-            //Thread.Sleep(ms);
+            Thread.Sleep(ms);
             IO.Out($"Du tog {Enemy.Weapon.Damage}hp i skada");
-            //Thread.Sleep(ms);
+            Thread.Sleep(ms);
             Player.Hp -= Enemy.Weapon.Damage; 
             IO.Out($"Du har nu {Player.Hp} hp kvar");
-            //Thread.Sleep(ms);
+            Thread.Sleep(ms);
             IO.Out("");
 
 
