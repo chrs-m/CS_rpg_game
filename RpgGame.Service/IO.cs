@@ -2,12 +2,22 @@ namespace RpgGame.Service;
 
 public class IO
 {
+    public static Queue<string> Buffer { get; set; } = new Queue<string>();
+
     public static void Out(string message, bool clear = false)
     {
         if (clear)
             Console.Clear();
 
         Console.WriteLine(message);
+    }
+
+    private static string ReadLine()
+    {
+        if (Buffer.Count > 0)
+            return Buffer.Dequeue();
+        
+        return Console.ReadLine()!;
     }
 
     public static int IntIn(string message, bool clear = false)
@@ -18,7 +28,7 @@ public class IO
         while (true)
         {
             Console.Write(message);
-            var input = Console.ReadLine();
+            var input = ReadLine();
 
             if (int.TryParse(input, out int result))
             {
@@ -41,7 +51,7 @@ public class IO
         while (true)
         {
             Console.Write(message);
-            var input = Console.ReadLine();
+            var input = ReadLine();
 
             if (input != null)
                 return input;
@@ -56,9 +66,7 @@ public class IO
     public static void AnyIn(string message, bool clear = false)
     {
         if (clear)
-        {
             Console.Clear();
-        }
 
         Console.Write(message);
         Console.ReadLine();

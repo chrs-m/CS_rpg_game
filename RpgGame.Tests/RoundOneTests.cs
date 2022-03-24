@@ -13,25 +13,20 @@ public class RoundOneTests
     public void StartRound_PlayerGetsHp_HpIsAdded()
     {
         Player player = new Player("Test player", 20, new Weapon("", 0, ""), 0);
-        
-        var stringWriter = new StringWriter();
-        Console.SetOut(stringWriter);
-
-        var stringReader = new StringReader("1");
-        Console.SetIn(stringReader);
+        IO.Buffer.Enqueue("1");
 
         RoundOne round = new RoundOne(player);
         round.StartRound();
 
         Assert.AreEqual(23, player.Hp);
     }
-    
-    
+
+
     [TestMethod]
     public void StartRound_PlayerGetsWeapon_DmgIsAdded()
     {
         Player player = new Player("Test player", 20, new Weapon("", 0, ""), 0);
-        
+
         var stringWriter = new StringWriter();
         Console.SetOut(stringWriter);
 

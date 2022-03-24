@@ -14,11 +14,8 @@ public class RoundTwoTests
     {
         Player player = new Player("Test player", 23, new Weapon("Trasig käpp", 5, ""), 0);
 
-        var stringWriter = new StringWriter();
-        Console.SetOut(stringWriter);
-
-        var stringReader = new StringReader("1");
-        Console.SetIn(stringReader);
+        IO.Buffer.Enqueue("5");
+        IO.Buffer.Enqueue("2");
 
         RoundTwo round = new RoundTwo(player);
         round.StartRound();
