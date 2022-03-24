@@ -37,14 +37,5 @@ public class Items
         new Coins("stor myntbörs", 50),
     };
 
-    public static List<Enemy> Enemies = new List<Enemy>()
-    {
-        new Enemy("Piss i huvet", 15, "enemy",
-            new Weapon("Repstump", 3, $"En bit rep som 'Piss i huvet' tagit med sig från hamnen.", 0)),
-        new Enemy("Gissa mitt jobb", 30, "enemy",
-            new Weapon("Vässat stolsben", 10, $"Efter slagsmål i hamnen så fick 'Gissa mitt jobb' med sig detta hem.",
-                0)),
-        new Enemy("Tjuven i Baghdad", 70, "boss",
-            new Weapon("Shamshir stulen i Baghdad", 20, "Föremålet behöver ingen närmre beskrvining..", 0))
-    };
+    public static List<Enemy> Enemies = new List<Enemy>();
 }
