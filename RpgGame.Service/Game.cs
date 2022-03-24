@@ -85,9 +85,10 @@ public class Game
     {
         while (true)
         {
-            var shouldRestart = IO.StringIn("Vill du starta om? (y/n) ");
+            IO.Out("Vill du starta om?");
+            var shouldRestart = IO.StringIn("[1] för att börja om, [2] för att avsluta");
 
-            if (shouldRestart == "y")
+            if (shouldRestart == "1")
             {
                 Console.Clear();
                 Game game = new Game();
@@ -95,7 +96,7 @@ public class Game
                 break;
             }
 
-            if (shouldRestart == "n")
+            if (shouldRestart == "2")
             {
                 Environment.Exit(0);
                 break;

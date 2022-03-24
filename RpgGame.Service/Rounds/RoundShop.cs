@@ -3,7 +3,7 @@ namespace RpgGame.Service.Rounds;
 public class RoundShop : Round
 {
     private Player Player;
-    private bool exitShop = false; 
+    private bool exitShop = false;
 
     public RoundShop(Player player)
     {
@@ -41,6 +41,7 @@ public class RoundShop : Round
         {
             IO.Out("Vad vill du köpa?");
             IO.Out($"Du har {Player.Coins}kr att nyttja");
+            IO.Out("");
             IO.Out("[1] Mat -- [2] Vapen ");
             int choosen = IO.IntIn("Gör ditt val: ");
 
@@ -50,7 +51,7 @@ public class RoundShop : Round
                 FoodShop();
                 break;
             }
-            
+
             if (choosen == 2)
             {
                 Console.Clear();
@@ -58,7 +59,7 @@ public class RoundShop : Round
                 break;
             }
         }
-        
+
         IO.Out("Du går ut från shoppen och fortsätter på ditt äventyr.");
     }
 
@@ -87,7 +88,7 @@ public class RoundShop : Round
             {
                 break;
             }
-            
+
             if (choosen > 0 && choosen <= index - 1)
             {
                 Food wantsToBuy = BuyableFood[choosen - 1];
@@ -101,7 +102,7 @@ public class RoundShop : Round
                 }
                 else
                 {
-                   IO.Out($"Du har inte råd med {wantsToBuy.Name}. Du saknar {wantsToBuy.Price - Player.Coins}kr"); 
+                    IO.Out($"Du har inte råd med {wantsToBuy.Name}. Du saknar {wantsToBuy.Price - Player.Coins}kr");
                 }
 
                 break;
@@ -118,7 +119,7 @@ public class RoundShop : Round
                 Console.Clear();
                 StartShop();
             }
-            
+
             if (choosen == 2)
             {
                 exitShop = true;
@@ -129,7 +130,7 @@ public class RoundShop : Round
     private void WeaponShop()
     {
         var BuyableWeapon = Items.Weapons.Where(weapon => weapon.Price != 0).OrderBy(weapon => weapon.Price).ToArray();
-        
+
         Console.Clear();
         IO.Out("");
         int index = 1;
@@ -145,6 +146,7 @@ public class RoundShop : Round
         while (!exitShop)
         {
             IO.Out($"Du har {Player.Coins}kr");
+            IO.Out("");
             int choosen = IO.IntIn($"Välj en produkt (1 - {index - 1}), 9 för att avbryta: ");
             Console.Clear();
 
@@ -166,7 +168,7 @@ public class RoundShop : Round
                 }
                 else
                 {
-                    IO.Out($"Du har inte råd med {wantsToBuy.Name}. Du saknar {wantsToBuy.Price - Player.Coins}kr"); 
+                    IO.Out($"Du har inte råd med {wantsToBuy.Name}. Du saknar {wantsToBuy.Price - Player.Coins}kr");
                 }
 
                 break;
@@ -183,12 +185,11 @@ public class RoundShop : Round
             {
                 StartShop();
             }
-            
+
             if (choosen == 2)
             {
                 exitShop = true;
             }
         }
     }
-
 }

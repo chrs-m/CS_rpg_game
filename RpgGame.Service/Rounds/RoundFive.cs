@@ -14,12 +14,14 @@ public class RoundFive : Round
         var ms = 1000;
 
         IO.Out("Det börjar bli mörkt och du är trött efter din första duell");
+        //Thread.Sleep(ms);
         IO.Out("Lite längre fram ligger Barfotaslingan som kan fungera som sovplats för natten.");
 
         while (true)
         {
             Console.ForegroundColor = ConsoleColor.DarkGreen;
             IO.Out($"Vill du gå till Barfotaslingan för att sova för natten?");
+            IO.Out("");
             Console.ForegroundColor = ConsoleColor.Green;
             IO.Out("[1] för att sova -- [2] för att låta bli");
             Console.ForegroundColor = ConsoleColor.Cyan;
@@ -34,6 +36,7 @@ public class RoundFive : Round
                 IO.Out("", true);
                 Console.ForegroundColor = ConsoleColor.DarkGreen;
                 IO.Out("Du är trött och vimsar omkring i skogen och går vilse..");
+                IO.Out("");
                 Console.ForegroundColor = ConsoleColor.DarkYellow;
                 IO.Out($"Din girighet kostade dig  5hp. Du har nu {Player.Hp}hp kvar.");
                 IO.Out($"Vilket inte gav dig någonting för du slocknade av utmattning istället..");
@@ -51,14 +54,16 @@ public class RoundFive : Round
 
         Player.Hp += 5;
         IO.Out("Du somnade gott på en bädd av torkade löv.");
+        //Thread.Sleep(ms);
+        IO.Out("");
         IO.Out("Tack vare att du vilade ut ordentligt så fick du lite extra hp.");
         IO.Out($"Du har nu {Player.Hp}hp inför din nästa strid.");
-        
-        
+
+
         Console.ResetColor();
         Console.ForegroundColor = ConsoleColor.Cyan;
+        IO.Out("");
         IO.Out("Tryck på en tangent för att gå vidare..");
         IO.AnyIn("");
-        
     }
 }

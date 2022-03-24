@@ -21,7 +21,9 @@ public class RoundThree : Round
 
         IO.Out(
             $"När du vandrar vidare mot August Kobbs damm så ser du en {randomCoins.Name} på gatan som någon verkar ha tappat.");
+        //Thread.Sleep(ms);
         IO.Out($"Vill du plocka upp {randomCoins.Name} eller låta den ligga kvar på marken?");
+        IO.Out("");
         Console.ForegroundColor = ConsoleColor.Green;
         IO.Out("[1] för att plocka upp -- [2] för att låta den ligga");
         Console.ForegroundColor = ConsoleColor.Cyan;

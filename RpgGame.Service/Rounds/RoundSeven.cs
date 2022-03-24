@@ -33,6 +33,7 @@ public class RoundSeven : Round
         {
             Console.ForegroundColor = ConsoleColor.DarkGreen;
             IO.Out($"Vill du anta duellen mot '{Items.Enemies[1].Name}'?");
+            IO.Out("");
             Console.ForegroundColor = ConsoleColor.Green;
             IO.Out("[1] för att anta -- [2] för att låta bli");
             Console.ForegroundColor = ConsoleColor.Cyan;
@@ -62,6 +63,7 @@ public class RoundSeven : Round
         if (winner == "player")
         {
             IO.Out($"{Items.Enemies[1].Name} var en enkel match för en krigare som dig.");
+            //Thread.Sleep(ms);
             IO.Out($"Med din {Player.Weapon.Name} gav du {Items.Enemies[1].Name} vad han tålde.");
             IO.Out("Du gick vinnade ut ur den här duellen, grattis!");
 
@@ -69,6 +71,7 @@ public class RoundSeven : Round
             {
                 Console.ForegroundColor = ConsoleColor.Green;
                 IO.Out($"Vill du gå vidare eller stå kvar och glo på {Items.Enemies[1].Name}");
+                IO.Out("");
                 Console.ForegroundColor = ConsoleColor.Cyan;
                 IO.Out("[1] för att gå vidare -- [2] för att glo");
 
@@ -93,6 +96,7 @@ public class RoundSeven : Round
         else
         {
             IO.Out($"{Items.Enemies[1].Name} blev för mycket av en utmaning för dig.");
+            //Thread.Sleep(ms);
             IO.Out($"Med sin {Items.Enemies[1].Weapon.Name} slog han dig gul och blå och du fick ge upp.");
             Game.GameOver();
         }

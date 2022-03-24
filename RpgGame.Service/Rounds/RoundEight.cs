@@ -3,7 +3,7 @@ namespace RpgGame.Service.Rounds;
 public class RoundEight : Round
 {
     private Player Player;
-    
+
     public RoundEight(Player player)
     {
         Player = player;
@@ -27,6 +27,7 @@ public class RoundEight : Round
         IO.Out(
             $"När du vandrar vidare längs Azaleadalen mot älgarna så ser du en {randomCoins.Name} på gatan som någon verkar ha tappat.");
         IO.Out($"Vill du plocka upp {randomCoins.Name} eller låta den ligga kvar på marken?");
+        IO.Out("");
         Console.ForegroundColor = ConsoleColor.Green;
         IO.Out("[1] för att plocka upp -- [2] för att låta den ligga");
         Console.ForegroundColor = ConsoleColor.Cyan;
@@ -91,6 +92,8 @@ public class RoundEight : Round
             IO.Out("", true);
             Console.ForegroundColor = ConsoleColor.DarkGreen;
             IO.Out("Med ögonen i backen virrar du omkring utan resultat, rakt in i skogen och du är vilse..");
+            //Thread.Sleep(ms);
+            IO.Out("");
             Console.ForegroundColor = ConsoleColor.DarkYellow;
             IO.Out($"Din girighet kostade dig  2hp. Du har nu {Player.Hp}hp kvar.");
             IO.Out("");
@@ -116,7 +119,7 @@ public class RoundEight : Round
             break;
         }
     }
-    
+
     private void FindFood()
     {
         var ms = 1000;
@@ -127,6 +130,7 @@ public class RoundEight : Round
 
         IO.Out($"En bit bort så ser du {randomFood.Name} på marken.");
         IO.Out("Vill du plocka upp och förtära det du hittade?");
+        IO.Out("");
         Console.ForegroundColor = ConsoleColor.Green;
         IO.Out("[1] för Ja -- [2] för Nej");
         Console.ForegroundColor = ConsoleColor.Cyan;
@@ -168,6 +172,7 @@ public class RoundEight : Round
             // Thread.Sleep(ms);
             Console.ForegroundColor = ConsoleColor.Green;
             IO.Out("Vill du stanna lite till eller gå vidare?");
+            IO.Out("");
             Console.ForegroundColor = ConsoleColor.Cyan;
             IO.Out("[1] för att stanna -- [2] för att gå vidare");
             int choosen = IO.IntIn("");
