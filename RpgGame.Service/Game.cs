@@ -17,28 +17,38 @@ public class Game
 
             player = new Player(name, 20, Items.Weapons[0], 0);
 
-            new RoundOne(player).StartRound(); // Done
+            Items.Enemies.Clear();
+
+            Items.Enemies.Add(new Enemy("Piss i huvet", 15, "enemy",
+                new Weapon("Repstump", 3, $"En bit rep som 'Piss i huvet' tagit med sig från hamnen.", 0)));
+
+            Items.Enemies.Add(new Enemy("Gissa mitt jobb", 30, "enemy",
+                new Weapon("Vässat stolsben", 10, $"Efter slagsmål i hamnen så fick 'Gissa mitt jobb' med sig detta hem.", 0)));
+
+            Items.Enemies.Add(new Enemy("Tjuven i Baghdad", 70, "boss",
+                new Weapon("Shamshir stulen i Baghdad", 20, "Föremålet behöver ingen närmre beskrvining..", 0)));
+
+            new RoundOne(player).StartRound();
             Console.Clear();
-            new RoundTwo(player).StartRound(); // Done
+            new RoundTwo(player).StartRound();
             Console.Clear();
-            new RoundThree(player).StartRound(); // Done
+            new RoundThree(player).StartRound();
             Console.Clear();
-            new RoundFour(player).StartRound(); // Done
+            new RoundFour(player).StartRound();
             Console.Clear();
-            new RoundFive(player).StartRound(); // Done
+            new RoundFive(player).StartRound();
             Console.Clear();
-            new RoundShop(player).StartRound(); // Done
+            new RoundShop(player).StartRound();
             Console.Clear();
-            new RoundSeven(player).StartRound(); // Done
+            new RoundSeven(player).StartRound();
             Console.Clear();
-            new RoundEight(player).StartRound(); // Done
+            new RoundEight(player).StartRound();
             Console.Clear();
-            new RoundShop(player).StartRound(); // Done
+            new RoundShop(player).StartRound();
             Console.Clear();
             new RoundTen(player).StartRound();
             Console.Clear();
             new RoundEleven(player).StartRound();
-
         }
     }
 
@@ -85,8 +95,11 @@ public class Game
     {
         while (true)
         {
+            Console.ForegroundColor = ConsoleColor.Green;
             IO.Out("Vill du starta om?");
-            var shouldRestart = IO.StringIn("[1] för att börja om, [2] för att avsluta");
+            Console.ForegroundColor = ConsoleColor.DarkGreen;
+            var shouldRestart = IO.StringIn("[1] för att börja om, [2] för att avsluta ");
+            Console.ResetColor();
 
             if (shouldRestart == "1")
             {
@@ -98,8 +111,9 @@ public class Game
 
             if (shouldRestart == "2")
             {
+                Console.ForegroundColor = ConsoleColor.Yellow;
+                IO.Out($"Tack för att du spelade!");
                 Environment.Exit(0);
-                break;
             }
         }
     }

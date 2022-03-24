@@ -11,25 +11,25 @@ public class RoundTen : Round
 
     public override void StartRound()
     {
-        var ms = 1000;
+        var ms = 1300;
 
         IO.Out("Efter din lilla shoppingspree går du vidare mot älgarna som är din slutstation för detta äventyr!");
-        //Thread.Sleep(ms);
+        Thread.Sleep(ms);
         IO.Out("Inne bland älgarna ser du bossen för detta underbara äventyr.");
-        //Thread.Sleep(ms);
+        Thread.Sleep(ms);
         IO.Out(
             $"Bossen du skall möta är ingen mindre än '{Items.Enemies[2].Name}' med sin {Items.Enemies[2].Weapon.Name}");
-        //Thread.Sleep(ms);
+        Thread.Sleep(ms);
         IO.Out($"Lite bakgrund om {Items.Enemies[2].Weapon.Name}");
-        //Thread.Sleep(ms);
+        Thread.Sleep(ms);
         IO.Out($"Bakgrund: {Items.Enemies[2].Weapon.Description}");
-        //Thread.Sleep(ms);
+        Thread.Sleep(ms);
         IO.Out(
             $"Du klättrar över staketet för att springa mot '{Items.Enemies[2].Name}' för att visa vem som är alfan i Slottskogen.");
-        //Thread.Sleep(ms);
+        Thread.Sleep(ms);
         IO.Out(
             $"'{Items.Enemies[2].Name}' bara hånler mot dig när du kommer springades som en galen webbutvecklare med för lite sömn.");
-        //Thread.Sleep(ms);
+        Thread.Sleep(ms);
 
 
         while (true)
@@ -66,7 +66,7 @@ public class RoundTen : Round
         if (winner == "player")
         {
             IO.Out($"'{Items.Enemies[2].Name}' var en enkel match för en krigare som dig.");
-            //Thread.Sleep(ms);
+            Thread.Sleep(ms);
             IO.Out("");
             IO.Out($"Med din {Player.Weapon.Name} gav du '{Items.Enemies[2].Name}' vad han tålde.");
             IO.Out("Du gick vinnade ut ur den här duellen, grattis!");
@@ -98,8 +98,12 @@ public class RoundTen : Round
         }
         else
         {
+            Console.ForegroundColor = ConsoleColor.Red;
+            IO.Out("");
             IO.Out($"'{Items.Enemies[2].Name}' blev för mycket av en utmaning för dig.");
+            Thread.Sleep(ms);
             IO.Out($"Med sin '{Items.Enemies[2].Weapon.Name}' slog han dig gul och blå och du fick ge upp.");
+            Console.ResetColor();
             Game.GameOver();
         }
     }

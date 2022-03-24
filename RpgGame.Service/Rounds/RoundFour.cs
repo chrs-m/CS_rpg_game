@@ -11,19 +11,21 @@ public class RoundFour : Round
 
     public override void StartRound()
     {
-        var ms = 1000;
+        var ms = 1300;
 
         IO.Out("Du traskar vidare upp emot 'Vita villan'..");
-        //Thread.Sleep(ms);
+        Thread.Sleep(ms);
         IO.Out("På avstånd ser du en person som kanske fått i sig något olagligt..");
-        //Thread.Sleep(ms);
+        Thread.Sleep(ms);
         IO.Out($"Han viftar friskt med vad som ser ut som på avstånd ser ut som en {Items.Enemies[0].Weapon.Name}.");
         IO.Out("");
-        //Thread.Sleep(ms);
+        Thread.Sleep(ms);
         IO.Out(
             $"När du närmar dig så ser du att det är '{Items.Enemies[0].Name}' från hamnen som står där och viftar med sin {Items.Enemies[0].Weapon.Name}");
+        Thread.Sleep(ms);
         IO.Out($"När '{Items.Enemies[0].Name}' får syn på dig börjar han vråla om att utmana dig i en duell..");
         IO.Out("");
+        Thread.Sleep(ms);
 
 
         while (true)
@@ -59,9 +61,11 @@ public class RoundFour : Round
 
         if (winner == "player")
         {
+            Thread.Sleep(ms);
             IO.Out($"{Items.Enemies[0].Name} var en enkel match för en krigare som dig.");
-            //Thread.Sleep(ms);
+            Thread.Sleep(ms);
             IO.Out($"Med din {Player.Weapon.Name} gav du {Items.Enemies[0].Name} vad han tålde.");
+            Thread.Sleep(ms);
             IO.Out("Du gick vinnade ut ur den här duellen, grattis!");
 
             while (true)
@@ -79,7 +83,7 @@ public class RoundFour : Round
                 if (choosen == 2)
                 {
                     Console.Clear();
-                    IO.Out($"Du står kvar och glor på {Items.Enemies[0].Name} i fem minuter..");
+                    IO.Out($"Du står kvar och glor på '{Items.Enemies[0].Name}' i fem minuter..");
                 }
 
                 if (choosen == 1)
@@ -92,9 +96,12 @@ public class RoundFour : Round
         }
         else
         {
+            Console.ForegroundColor = ConsoleColor.Red;
+            IO.Out("");
             IO.Out($"{Items.Enemies[0].Name} blev för mycket av en utmaning för dig.");
-            //Thread.Sleep(ms);
+            Thread.Sleep(ms);
             IO.Out($"Med sin {Items.Enemies[0].Weapon} slog han dig gul och blå och du fick ge upp.");
+            Console.ResetColor();
             Game.GameOver();
         }
     }

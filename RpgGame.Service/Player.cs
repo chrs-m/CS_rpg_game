@@ -16,10 +16,12 @@ public class Player
         Coins = coins;
     }
 
-    public void Consume(Food food)
+    public void Consume(Food food, bool isPickedUp = false)
     {
         Hp += food.Modifier;
-        Coins -= food.Price;
+        
+        if(!isPickedUp)
+            Coins -= food.Price;
     }
 
     public void GetCoins(Coins coins)

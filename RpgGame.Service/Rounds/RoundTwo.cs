@@ -11,15 +11,17 @@ public class RoundTwo : Round
 
     public override void StartRound()
     {
-        var ms = 1000;
+        var ms = 1300;
 
         var random = new Random();
         int index = random.Next(Items.Food.Count);
         var randomFood = Items.Food[index];
 
         IO.Out($"När du kommer till säldammen så ser du {randomFood.Name} på marken.");
+        Thread.Sleep(ms);
         IO.Out("Vill du plocka upp och förtära det du hittade?");
         Console.ForegroundColor = ConsoleColor.Green;
+        IO.Out("");
         IO.Out("[1] för Ja -- [2] för Nej");
         Console.ForegroundColor = ConsoleColor.Cyan;
         var inputAnswerFood = IO.IntIn("Gör ditt val: ");
@@ -28,7 +30,7 @@ public class RoundTwo : Round
         if (inputAnswerFood == 1)
         {
             IO.Out("", true);
-            Player.Consume(randomFood);
+            Player.Consume(randomFood, true);
 
             if (randomFood.Modifier < 0)
             {
