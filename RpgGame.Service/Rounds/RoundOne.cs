@@ -4,8 +4,6 @@ using RpgGame.Service;
 
 public class RoundOne : Round
 {
-    public int RoundNum { get; }
-    public string RoundType { get; }
     private Player Player;
 
     public RoundOne(Player player)
