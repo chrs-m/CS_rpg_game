@@ -13,25 +13,26 @@ public class RoundOne : Round
 
     public override void StartRound()
     {
-        var ms = 1000;
+        var ms = 1300;
 
         IO.Out($"Välkommen {Player.Name}!");
-        //Thread.Sleep(ms);
+        Thread.Sleep(ms);
         IO.Out("Du vaknar upp lite halvtrasig i slottskogen efter en utekväll..");
-        //Thread.Sleep(ms);
+        Thread.Sleep(ms);
         IO.Out(
             $"Bredvid dig hittar du {Items.Weapons[0].Name}({Items.Weapons[0].Damage}dmg) och en {Items.Food[0].Name}.");
-        //Thread.Sleep(ms);
+        Thread.Sleep(ms);
         IO.Out($"{Items.Food[0].Name} ger dig lite extra energi ({Items.Food[0].Modifier}).");
 
         Player.Weapon = Items.Weapons[0];
         Player.Consume(Items.Food[0], true);
 
-        //Thread.Sleep(ms);
+        Thread.Sleep(ms);
         IO.Out($"Du har nu {Player.Hp}hp och ditt vapen är {Player.Weapon.Name} ({Player.Weapon.Damage}dmg).");
         IO.Out("");
         while (true)
         {
+            IO.Out("");
             IO.Out("1. Gå vidare");
             int choosen = IO.IntIn("");
 
